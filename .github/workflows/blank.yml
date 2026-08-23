@@ -25,9 +25,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
+      - name: install package
+        run: npm install
+
       - name: check linters
         run: npm run lint 
-
 
       # Runs a single command using the runners shell
       - name: unit test
